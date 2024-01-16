@@ -1,0 +1,21 @@
+<!-- dynamic-form.component.html -->
+
+<div class="dynamic-form-container" cdkDropList (cdkDropListDropped)="drop($event)">
+  <div class="attribute-container me-3" >
+    <div class="attribute-card" cdkDrag *ngFor="let attributePosition of attributePositions">
+      <mat-form-field class="example-full-width">
+        <mat-label>{{ attributePosition.attribute.name }}</mat-label>
+        <input [disabled]="mode === Mode.CREATE"
+               matInput
+               [ngStyle]="{ 'pointer-events': mode === Mode.CREATE ? 'none' : 'auto' }"
+               [placeholder]="attributePosition.attribute.name + '...'">
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="button-container" [ngStyle]="{ 'gap': '0.8rem'}">
+    <div class="mj-button-primary w-100 flex-grow text-center">Add new input text</div>
+    <div class="mj-button-primary w-100 flex-grow text-center">Add new input numeric</div>
+    <div class="mj-button-primary w-100 flex-grow text-center">Add new input date</div>
+    <div class="mj-button-primary w-100 flex-grow text-center">Add new input logic</div>
+  </div>
+</div>

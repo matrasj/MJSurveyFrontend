@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.mj-button-primary {
+  text-decoration: none;
+  background-color: #1a9086;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px 25px 25px 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mj-button-primary:hover {
+  background-color: #155e55;
+}
